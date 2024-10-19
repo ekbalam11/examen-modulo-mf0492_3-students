@@ -1,6 +1,8 @@
+//Escribe una función que recibe un conjunto de tareas y devuelve únicamente aquellas que siguen pendientes (propiedad completed está marcada como false)
 
+//BONUS: No utilices el operador de comparación "==" o "===" para realizar el ejercicio
 function filterPendingTaks(tasks) {
-
+  return tasks.filter(task => !task.completed)
 }
 
 const tasks = [
