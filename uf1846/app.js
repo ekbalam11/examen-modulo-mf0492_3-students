@@ -46,7 +46,8 @@ app.get('/form', (req, res) => {
 app.get('/check', async (req, res) => {
     
     try {
-        const patient = await Patient.findOne();
+        const { ssnPatient } = req.query
+        const patient = await Patient.findOne( ssn );
         console.log("🚀 ~ file: app.js:52 ~ app.get ~ patient:", patient)
 
         if (patient) {
